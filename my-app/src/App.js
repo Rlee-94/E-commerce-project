@@ -1,4 +1,4 @@
-import "./styles.scss";
+import "./scss/styles.scss";
 import "./components/Navigation";
 import Navigation from "./components/Navigation";
 
