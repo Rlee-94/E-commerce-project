@@ -1,11 +1,13 @@
 import "./scss/styles.scss";
 import "./components/Navigation";
 import Navigation from "./components/Navigation";
+import Hero from "./components/Hero";
 
 function App() {
   return (
     <div className="App">
       <Navigation />
+      <Hero />
     </div>
   );
 }

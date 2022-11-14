@@ -2,6 +2,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
+import ShoppingCart from "./ShoppingCart";
 
 export default function Navigation() {
   return (
@@ -26,7 +27,7 @@ export default function Navigation() {
                   <Nav.Link href="#action1">Home</Nav.Link>
                   <Nav.Link href="#action2">About</Nav.Link>
                   <Nav.Link href="#action3">Shop</Nav.Link>
-                  <Nav.Link href="#action4">Checkout</Nav.Link>
+                  <ShoppingCart />
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>

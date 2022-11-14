@@ -1,7 +1,8 @@
 //THEME COLORS
-$gold: #d9b061;
-$tan: #d9c4a9;
-$maroon: #3f0d0c;
+$black: #000;
+$light-gray: #d5d5d5;
+$dark-gray: #656565;
+$neon: #39e63b;
 
 //WHITE AND GRAY COLORS
 $white: #fff;
@@ -14,25 +15,76 @@ $gray-600: #6c757d;
 $gray-700: #495057;
 $gray-800: #343a40;
 $gray-900: #212529;
-$black: #000;
 
-$light: $maroon;
+$light: $light-gray;
 $dark: $gray-600;
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
 .navbar {
+  height: 5rem;
   &-nav a {
     color: $white;
     margin-left: 3rem;
   }
 }
 
-.navbar-brand {
-  color: $white;
-}
-
 .offcanvas-body,
 .offcanvas-header {
   background-color: $light;
+}
+
+.hero {
+  max-height: 20vh;
+  color: $light-gray;
+
+  &__container {
+    min-width: 100%;
+    background-color: $black;
+    display: flex;
+  }
+
+  &__left {
+    width: 50%;
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    border: 2px solid orangered;
+  }
+
+  &__right {
+    width: 50%;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+
+  &__button {
+    border-radius: 20px;
+    border: none;
+    background-color: $neon;
+    padding: 0.5em;
+    width: 50%;
+  }
 }
 
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
