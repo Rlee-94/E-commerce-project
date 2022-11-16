@@ -1,7 +1,6 @@
 import "./scss/styles.scss";
-import "./components/Navigation";
-import Navigation from "./components/Navigation";
-import Hero from "./components/Hero";
+import Navigation from "./layout/Navigation";
+import Hero from "./layout/Hero";
 
 function App() {
   return (
