@@ -18,6 +18,7 @@ $gray-900: #212529;
 
 $light: $black;
 $dark: $gray-600;
+$btn-close-color: $white;
 
 ////////////////////////////RESET//////////////////////
 * {
@@ -53,15 +54,25 @@ html {
 
 .navbar-light .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke=' rgba(213, 213, 213, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  padding: 1.5rem;
 }
+
+/////////////////////OFFCANVAS////////////////////////////////
 
 .offcanvas-body,
 .offcanvas-header {
   background-color: $light;
 }
 .offcanvas-title {
-  color: white;
+  color: $white;
 }
+.btn-close {
+  padding: 1rem !important;
+  margin: 1.5rem !important;
+  border: 2px solid $white !important;
+}
+
+////////////////////////////////HERO///////////////////////////////////
 
 .hero {
   max-height: 20vh;
