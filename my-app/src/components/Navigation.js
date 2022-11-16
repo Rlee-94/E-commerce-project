@@ -10,7 +10,9 @@ export default function Navigation() {
       {["md"].map((expand) => (
         <Navbar key={expand} bg="light" expand={expand}>
           <Container fluid>
-            <Navbar.Brand href="#">Navbar Logo</Navbar.Brand>
+            <Navbar.Brand href="#">
+              <h1>LOGO</h1>
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
@@ -27,7 +29,9 @@ export default function Navigation() {
                   <Nav.Link href="#action1">Home</Nav.Link>
                   <Nav.Link href="#action2">About</Nav.Link>
                   <Nav.Link href="#action3">Shop</Nav.Link>
-                  <ShoppingCart />
+                  <Nav.Link href="#action4">
+                    <ShoppingCart />
+                  </Nav.Link>
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
