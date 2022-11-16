@@ -75,7 +75,6 @@ html {
 ////////////////////////////////HERO///////////////////////////////////
 
 .hero {
-  max-height: 20vh;
   color: $light-gray;
 
   &__container {
@@ -113,6 +112,17 @@ html {
     padding: 0.5rem;
     width: 50%;
   }
+}
+
+///////////////////////////MAIN/////////////////////////////
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  background-color: orange;
 }
 
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
