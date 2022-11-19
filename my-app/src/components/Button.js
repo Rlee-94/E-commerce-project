@@ -1,7 +1,7 @@
-export default function Button() {
+export default function Button(props) {
   return (
     <>
-      <button className="hero__button">Start your journey</button>
+      <button className={props.className}>{props.buttonText}</button>
     </>
   );
 }

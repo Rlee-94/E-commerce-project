@@ -52,6 +52,7 @@ html {
   font-size: 2rem;
 }
 
+//Changing hamburger line colors.
 .navbar-light .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke=' rgba(213, 213, 213, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
   padding: 1.5rem;
@@ -111,6 +112,9 @@ html {
     background-color: $neon;
     padding: 0.5rem;
     width: 50%;
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    color: $black;
   }
 }
 
@@ -120,9 +124,55 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: $light-gray;
+
+  & > svg {
+    margin-top: 2.5rem;
+  }
 }
-.card {
-  background-color: orange;
+
+.card__text {
+  width: 50%;
+  color: $black;
+  margin-top: 1rem;
+}
+
+.card__title {
+  margin-top: 1rem;
+}
+
+////////////////REVIEWS///////////////////////
+.reviews {
+  position: relative;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &__quote {
+    width: 65%;
+  }
+}
+
+.bg__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.4;
+  overflow: hidden;
+
+  &-content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
 }
 
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";

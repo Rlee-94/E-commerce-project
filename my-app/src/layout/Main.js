@@ -23,7 +23,7 @@ export default function Main() {
       />
       <Card
         Icon={Collaboration}
-        title={"Seamless Collaboration Between Users"}
+        title={" Collaboration Between Users"}
         text={
           "BRAND allows seamless collaboration between services such as OneDrive, DropBox, iCloud, GoogleDocs, and more "
         }

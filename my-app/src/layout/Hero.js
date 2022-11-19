@@ -10,7 +10,7 @@ export default function Hero() {
             This is where I will place a bunch of random hero text for the
             landing page
           </p>
-          <Button />
+          <Button className="hero__button" buttonText="Start Your Journey" />
         </div>
         <div className="hero__right">
           <img
