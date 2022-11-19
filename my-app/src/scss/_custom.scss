@@ -2,7 +2,7 @@
 $black: #000;
 $light-gray: #d5d5d5;
 $dark-gray: #656565;
-$neon: #39e63b;
+$neon: #36d539;
 
 //WHITE AND GRAY COLORS
 $white: #fff;
@@ -141,6 +141,14 @@ html {
   margin-top: 1rem;
 }
 
+////////////////////////////////PRICING//////////////////////////@at-root
+.pricing__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 ////////////////REVIEWS///////////////////////
 .reviews {
   position: relative;
@@ -151,6 +159,23 @@ html {
     align-items: center;
     justify-content: center;
     width: 100%;
+  }
+
+  &__review {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $light-gray;
+    padding: 1rem;
+    margin: 0 4.5rem;
+    margin-top: 2rem;
+    box-shadow: 0 3rem 6rem rgba($black, 0.1);
+  }
+
+  &__header {
+    margin-top: 1.5rem;
+    color: $black;
   }
 
   &__quote {
@@ -165,7 +190,7 @@ html {
   height: 100%;
   width: 100%;
   z-index: -1;
-  opacity: 0.4;
+  opacity: 0.5;
   overflow: hidden;
 
   &-content {
@@ -173,6 +198,14 @@ html {
     width: 100%;
     object-fit: cover;
   }
+}
+
+blockquote:before {
+  display: block;
+  content: "\201C";
+  font-size: 80px;
+
+  color: #7a7a7a;
 }
 
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";

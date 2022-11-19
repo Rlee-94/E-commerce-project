@@ -15,8 +15,11 @@ export default function Reviews(props) {
 
         <div className="reviews__content">
           <h2 className="reviews__header">{props.header}</h2>
-          <p className="reviews__quote">{props.quote}</p>
-          <hr></hr>
+          <div className="reviews__review">
+            <blockquote>
+              <p className="reviews__quote">{props.quote}</p>
+            </blockquote>
+          </div>
         </div>
       </section>
     </>
