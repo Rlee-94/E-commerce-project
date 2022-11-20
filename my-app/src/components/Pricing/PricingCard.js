@@ -16,8 +16,8 @@ export default function PricingCard(props) {
       <PricingList
         item1="1 free user subscription"
         item2=" 5 uploads / month"
-        item3="Automatic Cloud Sync and Backup"
-        item4="250GB of free storage"
+        item3="File and link sharing"
+        item4="50GB of free storage"
       />
     </section>
   );
