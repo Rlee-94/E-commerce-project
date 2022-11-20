@@ -2,7 +2,8 @@
 $black: #000;
 $light-gray: #d5d5d5;
 $dark-gray: #656565;
-$neon: #36d539;
+$neon: #47df4a;
+$light-neon: #72e473;
 
 //WHITE AND GRAY COLORS
 $white: #fff;
@@ -19,6 +20,20 @@ $gray-900: #212529;
 $light: $black;
 $dark: $gray-600;
 $btn-close-color: $white;
+
+//LINEAR GRADIENTS
+
+$gray-gradient: linear-gradient(
+  to right,
+  rgba($gray-100, 0.5),
+  rgba($gray-400, 0.5)
+);
+
+$green-gradient: linear-gradient(
+  to right,
+  rgba($light-neon, 0.5),
+  rgba($neon, 0.6)
+);
 
 ////////////////////////////RESET//////////////////////
 * {
@@ -63,6 +78,12 @@ html {
 .offcanvas-body,
 .offcanvas-header {
   background-color: $light;
+}
+
+.offcanvas-body {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 2rem;
 }
 .offcanvas-title {
   color: $white;
@@ -135,31 +156,42 @@ html {
   width: 50%;
   color: $black;
   margin-top: 1rem;
+
+  &:last-child {
+    margin-bottom: 4rem;
+  }
 }
 
 .card__title {
   margin-top: 1rem;
 }
 
-////////////////////////////////PRICING//////////////////////////@at-root
+////////////////////////////////PRICING//////////////////////////
+.background {
+  width: 95%;
+  margin: 0.5rem;
+  padding: 0.6rem;
+}
+
 .pricing__card {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin-top: 0.5rem;
 
   &-header {
     text-align: center;
     text-transform: uppercase;
-  }
 
-  &-header_background {
-    background-color: $gray-100;
-    width: 95%;
-    margin: 0.5rem;
-    padding: 0.6rem;
+    &-gray {
+      background-image: $gray-gradient;
+    }
+
+    &-green {
+      background-image: $green-gradient;
+    }
   }
 
   &-content {
@@ -190,8 +222,29 @@ html {
   width: 40%;
 
   &:active {
-    background-color: #36d539;
+    background-color: $gray-400;
   }
+}
+.pricing__options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+
+  &-btn {
+    &:link,
+    &:visited {
+      font-size: 1rem;
+      color: $neon;
+      display: inline-block;
+      text-decoration: none;
+      border-bottom: 1px solid $neon;
+      padding: 3px;
+      transition: all 0.2s;
+    }
+  }
+}
+.pricing__options-btn {
 }
 
 .pricing__list {
@@ -203,7 +256,7 @@ html {
   }
 
   &-ul li::before {
-    color: #36d539;
+    color: $neon;
     content: "✓";
     margin-right: 0.5rem;
   }

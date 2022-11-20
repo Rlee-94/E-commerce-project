@@ -4,7 +4,7 @@ import PricingList from "./PricingList";
 export default function PricingCard(props) {
   return (
     <section className="pricing__card">
-      <div className="pricing__card-header_background">
+      <div className={`pricing__card-header-${props.className} background`}>
         <h3 className="pricing__card-header">{props.header}</h3>
       </div>
       <div className="pricing__card-content">
