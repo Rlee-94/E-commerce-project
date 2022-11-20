@@ -1,5 +1,4 @@
 import PricingButton from "./PricingButton";
-import PricingList from "./PricingList";
 
 export default function PricingCard(props) {
   return (
@@ -13,12 +12,6 @@ export default function PricingCard(props) {
         <h6 className="pricing__card-details">{props.details}</h6>
       </div>
       <PricingButton />
-      <PricingList
-        item1="1 free user subscription"
-        item2=" 5 uploads / month"
-        item3="File and link sharing"
-        item4="50GB of free storage"
-      />
     </section>
   );
 }

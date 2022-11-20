@@ -244,12 +244,13 @@ html {
     }
   }
 }
-.pricing__options-btn {
-}
 
 .pricing__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-top: 1.5rem;
-  margin-right: 1rem;
 
   &-ul {
     list-style: none;
