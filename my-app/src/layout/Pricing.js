@@ -7,7 +7,7 @@ export default function Pricing() {
         header="Free"
         price="$0"
         title="Great for starters"
-        details="perfect for starters who need minimal storage space."
+        details="Perfect solution for starters who need minimal storage space."
       />
     </section>
   );
