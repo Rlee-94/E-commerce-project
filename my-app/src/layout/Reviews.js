@@ -1,5 +1,6 @@
 import videomp4 from "../assets/img/bg-video.mp4";
 import videowebm from "../assets/img/bg-video.webm";
+import ReviewCard from "../components/ReviewCard/ReviewCard";
 
 export default function Reviews(props) {
   return (
@@ -13,14 +14,7 @@ export default function Reviews(props) {
           </video>
         </div>
 
-        <div className="reviews__content">
-          <h2 className="reviews__header">{props.header}</h2>
-          <div className="reviews__review">
-            <blockquote>
-              <p className="reviews__quote">{props.quote}</p>
-            </blockquote>
-          </div>
-        </div>
+        <ReviewCard />
       </section>
     </>
   );

@@ -12,11 +12,7 @@ function App() {
       <Hero />
       <Main />
       <Pricing />
-      <Reviews
-        header="BRAND makes people genuinely happy"
-        quote="We've been using BRAND for the past 3 years and it has improved our effeciency by 40%! I definitely recommend purchasing BRAND for your storage needs."
-        error="Your browser is not supported."
-      />
+      <Reviews />
     </div>
   );
 }
