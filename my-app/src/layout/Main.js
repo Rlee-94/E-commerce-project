@@ -25,14 +25,14 @@ export default function Main() {
         Icon={Collaboration}
         title={" Collaboration Between Users"}
         text={
-          "BRAND allows seamless collaboration between services such as OneDrive, DropBox, iCloud, GoogleDocs, and more "
+          "Osiris allows seamless collaboration between services such as OneDrive, DropBox, iCloud, GoogleDocs, and more "
         }
       />
       <Card
         Icon={Shield}
         title={"24/7 Realtime Protection"}
         text={
-          "Files uploaded to BRAND are scanned for any traces of malware during sync and during file transfers for collaboration."
+          "Files uploaded to Osiris are scanned for any traces of malware during sync and during file transfers for collaboration."
         }
       />
     </main>

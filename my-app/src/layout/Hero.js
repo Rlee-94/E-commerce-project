@@ -5,10 +5,12 @@ export default function Hero() {
     <section className="hero">
       <div className="hero__container">
         <div className="hero__left">
-          <h1 className="hero__header">The hero header will go here</h1>
+          <h1 className="hero__header">
+            We're here for all your storage needs
+          </h1>
           <p className="hero__text">
-            This is where I will place a bunch of random hero text for the
-            landing page
+            We have all the cloud storage solutions for you at an affordable
+            price for everyone. Click below to get started!
           </p>
           <Button className="hero__button" buttonText="Start Your Journey" />
         </div>

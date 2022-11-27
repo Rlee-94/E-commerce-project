@@ -11,7 +11,9 @@ export default function Navigation() {
         <Navbar key={expand} bg="light" expand={expand}>
           <Container fluid>
             <Navbar.Brand href="#">
-              <h1>LOGO</h1>
+              <h1>
+                <span className="navbar-o">O</span>SIRIS
+              </h1>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
@@ -21,7 +23,9 @@ export default function Navigation() {
             >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                  Offcanvas
+                  <h1 className="offcanvas-title">
+                    <span className="navbar-o">O</span>SIRIS
+                  </h1>
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>

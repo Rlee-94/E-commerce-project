@@ -4,6 +4,8 @@ import Youtube from "../components/Footer/Youtube";
 import Github from "../components/Footer/Github";
 
 export default function Footer() {
+  let date = new Date().getFullYear();
+
   return (
     <footer className="footer">
       <div className="footer__left">
@@ -19,6 +21,10 @@ export default function Footer() {
         <Youtube />
         <Github />
       </div>
+      <hr className="footer__break"></hr>
+      <small className="footer__copyright">
+        &copy; Copyright {date}, Reggie Lee
+      </small>
     </footer>
   );
 }

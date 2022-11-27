@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700;800&display=swap");
+
 //THEME COLORS
 $black: #000;
 $light-gray: #d5d5d5;
@@ -52,6 +54,7 @@ $black-gradient: linear-gradient(
 * {
   margin: 0;
   padding: 0;
+  font-family: "Open Sans", sans-serif;
 }
 
 *,
@@ -73,11 +76,17 @@ html {
     color: $white;
     margin-left: 3rem;
   }
+
+  &-o {
+    color: $neon;
+  }
 }
+
 .navbar-brand > h1 {
   color: $white !important;
   margin: 2rem;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  font-weight: 800;
 }
 
 //Changing hamburger line colors.
@@ -96,15 +105,22 @@ html {
 .offcanvas-body {
   text-align: center;
   font-size: 2rem;
-  margin-top: 2rem;
 }
+
 .offcanvas-title {
   color: $white;
+  padding: 2rem;
+  font-size: 2.5rem !important;
+  font-weight: 800;
 }
 .btn-close {
   padding: 1rem !important;
   margin: 1.5rem !important;
-  border: 2px solid $white !important;
+  border: 2px solid $neon !important;
+}
+
+.nav-link {
+  margin-top: 2.5rem;
 }
 
 ////////////////////////////////HERO///////////////////////////////////
@@ -121,10 +137,18 @@ html {
 
   &__left {
     @include flex-column();
-    width: 100%;
+
     font-size: 1rem;
     padding: 1rem;
     margin-top: 4rem;
+  }
+
+  &__header {
+    margin-top: 2rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    font-size: 1.9rem;
+    font-weight: 700;
   }
 
   &__right {
@@ -137,13 +161,20 @@ html {
     height: auto;
   }
 
+  &__text {
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    width: 75%;
+    font-weight: 300;
+  }
+
   &__button {
     border-radius: 20px;
     border: none;
     background-color: $neon;
     padding: 0.5rem;
-    width: 50%;
-    margin-top: 1rem;
+    width: 25rem;
+    margin-top: 2.5rem;
     font-size: 1.3rem;
     color: $black;
   }
@@ -188,6 +219,7 @@ html {
   &-header {
     text-align: center;
     text-transform: uppercase;
+    font-weight: 600;
 
     &-gray {
       background-image: $gray-gradient;
@@ -211,6 +243,10 @@ html {
     text-transform: uppercase;
     font-size: 1rem;
     margin-top: 1rem;
+  }
+
+  &-price {
+    font-weight: 700;
   }
 
   &-details {
@@ -285,7 +321,7 @@ html {
   &__header {
     margin-top: 1.5rem;
     color: $black;
-    font-weight: bold;
+    font-weight: 800;
   }
 
   &__text {
@@ -294,6 +330,7 @@ html {
     font-weight: bold;
     margin-top: 1rem;
     color: $black;
+    font-weight: 400;
   }
 
   &__author {
@@ -328,6 +365,7 @@ html {
 
   &__left {
     margin-top: 2rem;
+    padding: 1rem;
 
     & > p {
       font-size: 1.3rem;
@@ -335,12 +373,22 @@ html {
   }
 
   &__right {
-    margin-top: 4rem;
+    margin-top: 3rem;
     padding: 1rem;
 
     & > * {
-      margin-left: 1.5rem;
+      margin-right: 1.5rem;
     }
+  }
+
+  &__break {
+    color: $gray-300;
+    width: 90%;
+  }
+
+  &__copyright {
+    font-size: 1rem;
+    margin-bottom: 1rem;
   }
 }
 
