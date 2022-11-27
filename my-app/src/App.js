@@ -4,6 +4,7 @@ import Hero from "./layout/Hero";
 import Main from "./layout/Main";
 import Reviews from "./layout/Reviews";
 import Pricing from "./layout/Pricing";
+import Footer from "./layout/Footer";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Main />
       <Pricing />
       <Reviews />
+      <Footer />
     </div>
   );
 }

@@ -1,3 +1,8 @@
+import Facebook from "../components/Footer/Facebook";
+import LinkedIn from "../components/Footer/Linkedin";
+import Youtube from "../components/Footer/Youtube";
+import Github from "../components/Footer/Github";
+
 export default function Footer() {
   return (
     <footer className="footer">
@@ -9,9 +14,10 @@ export default function Footer() {
         <p>Contact Us</p>
       </div>
       <div className="footer__right">
-        <label>Subscribe for the latest BRAND news</label>
-        <input type="email" name="email" className="footer__email"></input>
-        <input type="submit">Subscribe</input>
+        <Facebook />
+        <LinkedIn />
+        <Youtube />
+        <Github />
       </div>
     </footer>
   );

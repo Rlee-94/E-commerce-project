@@ -22,7 +22,6 @@ $dark: $gray-600;
 $btn-close-color: $white;
 
 //LINEAR GRADIENTS
-
 $gray-gradient: linear-gradient(
   to right,
   rgba($gray-100, 0.5),
@@ -31,9 +30,23 @@ $gray-gradient: linear-gradient(
 
 $green-gradient: linear-gradient(
   to right,
-  rgba($light-neon, 0.5),
+  rgba($light-neon, 0.2),
   rgba($neon, 0.6)
 );
+
+$black-gradient: linear-gradient(
+  to right,
+  rgba($black, 0.1),
+  rgba($black, 0.6)
+);
+
+///////////////MIXINS/////////////
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 ////////////////////////////RESET//////////////////////
 * {
@@ -107,12 +120,9 @@ html {
   }
 
   &__left {
+    @include flex-column();
     width: 100%;
     font-size: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     padding: 1rem;
     margin-top: 4rem;
   }
@@ -141,10 +151,7 @@ html {
 
 ///////////////////////////MAIN/////////////////////////////
 .main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flex-column();
   background-color: $gray-200;
 
   & > svg {
@@ -174,10 +181,7 @@ html {
 }
 
 .pricing__card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flex-column();
   width: 100%;
   margin-top: 0.5rem;
 
@@ -192,13 +196,14 @@ html {
     &-green {
       background-image: $green-gradient;
     }
+
+    &-black {
+      background-image: $black-gradient;
+    }
   }
 
   &-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @include flex-column();
     margin-top: 1rem;
   }
 
@@ -246,10 +251,7 @@ html {
 }
 
 .pricing__list {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flex-column();
   margin-top: 1.5rem;
 
   &-ul {
@@ -277,11 +279,7 @@ html {
   position: relative;
 
   &__container {
-    border: 2px solid orangered;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flex-column();
   }
 
   &__header {
@@ -295,6 +293,13 @@ html {
     font-size: 1.4rem;
     font-weight: bold;
     margin-top: 1rem;
+    color: $black;
+  }
+
+  &__author {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: $black;
   }
 }
 
@@ -305,7 +310,7 @@ html {
   height: 100%;
   width: 100%;
   z-index: -1;
-  opacity: 0.25;
+  opacity: 0.18;
   overflow: hidden;
 
   &-content {
@@ -315,12 +320,28 @@ html {
   }
 }
 
-blockquote:before {
-  display: block;
-  content: "\201C";
-  font-size: 80px;
+/////////////////////FOOOTER//////////////////////////
+.footer {
+  @include flex-column();
+  background-color: $black;
+  color: $gray-300;
 
-  color: #7a7a7a;
+  &__left {
+    margin-top: 2rem;
+
+    & > p {
+      font-size: 1.3rem;
+    }
+  }
+
+  &__right {
+    margin-top: 4rem;
+    padding: 1rem;
+
+    & > * {
+      margin-left: 1.5rem;
+    }
+  }
 }
 
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
