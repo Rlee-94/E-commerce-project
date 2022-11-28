@@ -2,7 +2,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import ShoppingCart from "../components/ShoppingCart";
+import ShoppingCart from "../components/Navigation/ShoppingCart";
 
 export default function Navigation() {
   return (

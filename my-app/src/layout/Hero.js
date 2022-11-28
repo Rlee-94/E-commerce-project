@@ -1,4 +1,5 @@
-import Button from "../components/Button";
+import Button from "../components/Hero/HeroButton";
+import ModalForm from "../components/Form/ModalForm";
 
 export default function Hero() {
   return (

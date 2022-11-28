@@ -1,8 +1,8 @@
-import Agent from "../components/Agent";
-import CloudSync from "../components/CloudSync";
-import Collaboration from "../components/Collaboration";
-import Shield from "../components/Shield";
-import Card from "../components/Card";
+import Agent from "../components/Main/Agent";
+import CloudSync from "../components/Main/CloudSync";
+import Collaboration from "../components/Main/Collaboration";
+import Shield from "../components/Main/Shield";
+import Card from "../components/Main/Card";
 
 export default function Main() {
   return (
