@@ -3,6 +3,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import ShoppingCart from "../components/Navigation/ShoppingCart";
+import HeroButton from "../components/Hero/HeroButton";
 
 export default function Navigation() {
   return (
@@ -35,6 +36,9 @@ export default function Navigation() {
                   <Nav.Link href="#action3">Pricing</Nav.Link>
                   <Nav.Link href="#action4">
                     <ShoppingCart />
+                  </Nav.Link>
+                  <Nav.Link>
+                    <HeroButton className="navbar__login" buttonText="Login" />
                   </Nav.Link>
                 </Nav>
               </Offcanvas.Body>

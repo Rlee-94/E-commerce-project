@@ -1,4 +1,4 @@
-import Button from "../components/Hero/HeroButton";
+import HeroButton from "../components/Hero/HeroButton";
 import ModalForm from "../components/Form/ModalForm";
 
 export default function Hero() {
@@ -13,7 +13,10 @@ export default function Hero() {
             We have all the cloud storage solutions for you at an affordable
             price for everyone. Click below to get started!
           </p>
-          <Button className="hero__button" buttonText="Start Your Journey" />
+          <HeroButton
+            className="hero__button"
+            buttonText="Try free for 14 days"
+          />
         </div>
         <div className="hero__right">
           <img

@@ -80,6 +80,23 @@ html {
   &-o {
     color: $neon;
   }
+
+  &__login {
+    border-radius: 20px;
+    border: 1px solid $neon;
+    background-color: black;
+    padding: 0.5rem;
+    width: 25rem;
+    margin-top: 2.5rem;
+    font-size: 1.3rem;
+    font-size: 1.8rem;
+    color: $white;
+
+    &:active {
+      background-color: $neon;
+      color: $black;
+    }
+  }
 }
 
 .navbar-brand > h1 {
@@ -176,8 +193,14 @@ html {
     padding: 0.5rem;
     width: 25rem;
     margin-top: 2.5rem;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: $black;
+
+    &:active {
+      background-color: $black;
+      color: $white;
+      border: 1px solid $neon;
+    }
   }
 }
 

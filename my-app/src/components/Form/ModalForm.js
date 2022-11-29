@@ -44,7 +44,7 @@ export default function ModalForm() {
             Close
           </Button>
           <Button variant="primary" onClick={handleClose}>
-            Save Changes
+            Submit
           </Button>
         </Modal.Footer>
       </Modal>
