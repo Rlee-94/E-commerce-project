@@ -99,6 +99,12 @@ html {
   }
 }
 
+#navbar__link {
+  &:active {
+    color: $neon;
+  }
+}
+
 .navbar-brand > h1 {
   color: $white !important;
   margin: 2rem;
@@ -185,22 +191,22 @@ html {
     font-weight: 300;
     line-height: 2.3rem;
   }
+}
 
-  &__button {
-    border-radius: 20px;
-    border: none;
-    background-color: $neon;
-    padding: 0.5rem;
-    width: 25rem;
-    margin-top: 2.5rem;
-    font-size: 1.5rem;
-    color: $black;
+#hero__button {
+  border-radius: 20px;
+  border: none;
+  background-color: $neon;
+  padding: 0.5rem;
+  width: 25rem;
+  margin-top: 2.5rem;
+  font-size: 1.5rem;
+  color: $black;
 
-    &:active {
-      background-color: $black;
-      color: $white;
-      border: 1px solid $neon;
-    }
+  &:active {
+    background-color: $black;
+    color: $white;
+    border: 1px solid $neon;
   }
 }
 
@@ -413,6 +419,44 @@ html {
   &__copyright {
     font-size: 1rem;
     margin-bottom: 1rem;
+  }
+}
+
+//////////////////MODAL-FORM//////////////////
+
+#modal {
+  background-color: $gray-900;
+
+  &__header,
+  &__footer {
+    background-color: $gray-900;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__header > h4 {
+    color: $white;
+    font-size: 2rem;
+  }
+
+  &__close,
+  &__submit {
+    padding: 0.5rem;
+    width: 15rem;
+    font-size: 1.2rem;
+  }
+
+  &__submit {
+    background-color: $neon;
+    color: $black;
+    border: none;
+  }
+}
+
+#form {
+  &__label {
+    color: $white;
+    font-size: 1.3rem;
   }
 }
 

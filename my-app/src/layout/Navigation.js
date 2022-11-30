@@ -31,10 +31,16 @@ export default function Navigation() {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href="#action1">Home</Nav.Link>
-                  <Nav.Link href="#action2">About</Nav.Link>
-                  <Nav.Link href="#action3">Pricing</Nav.Link>
-                  <Nav.Link href="#action4">
+                  <Nav.Link id="navbar__link" href="#action1">
+                    Home
+                  </Nav.Link>
+                  <Nav.Link id="navbar__link" href="#action2">
+                    About
+                  </Nav.Link>
+                  <Nav.Link id="navbar__link" href="#action3">
+                    Pricing
+                  </Nav.Link>
+                  <Nav.Link id="navbar__link" href="#action4">
                     <ShoppingCart />
                   </Nav.Link>
                   <Nav.Link>
