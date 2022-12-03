@@ -6,14 +6,15 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
 
-const phoneRegExp =
-  /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
+const phoneRegex = RegExp(/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/);
 
 const schema = Yup.object().shape({
-  firstName: Yup.string().required(),
-  lasttName: Yup.string().required(),
-  email: Yup.string().email().required(),
-  phone: Yup.string().matches(phoneRegExp, "Phone number is not valid"),
+  firstName: Yup.string().required("First name is required"),
+  lastName: Yup.string().required("Last name is required"),
+  email: Yup.string().email().required("Please enter a valid email"),
+  phone: Yup.string()
+    .matches(phoneRegex, "Phone number is not valid")
+    .required("Phone number is required"),
 });
 
 export default function ModalForm(props) {
@@ -22,9 +23,15 @@ export default function ModalForm(props) {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const { register, handleSubmit, errors } = useForm({
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
     resolver: yupResolver(schema),
   });
+
+  console.log(errors);
 
   const submitForm = (data) => {
     console.log(data);
@@ -46,39 +53,54 @@ export default function ModalForm(props) {
             <Form.Group className="mb-3" controlId="firstName">
               <Form.Label id="form__label">First Name</Form.Label>
               <Form.Control
-                id="form__input"
                 type="text"
                 placeholder="First name"
+                name="firstName"
                 autoFocus
-                {...register("firstName")}
+                {...register("firstName", { required: true })}
               />
+              {errors.firstName && (
+                <p className="form_error">{errors.firstName.message}</p>
+              )}
             </Form.Group>
+
             <Form.Group className="mb-3" controlId="lastName">
               <Form.Label id="form__label">Last Name</Form.Label>
               <Form.Control
-                id="form__input"
                 type="text"
+                name="lastName"
                 placeholder="Last name"
-                {...register("lastName")}
+                {...register("lastName", { required: true })}
               />
+              {errors.lastName && (
+                <p className="form_error">{errors.lastName.message}</p>
+              )}
             </Form.Group>
+
             <Form.Group className="mb-3" controlId="email">
               <Form.Label id="form__label">Email address</Form.Label>
               <Form.Control
-                id="form__input"
                 type="email"
+                name="email"
                 placeholder="name@email.com"
-                {...register("email")}
+                {...register("email", { required: true })}
               />
+              {errors.email && (
+                <p className="form_error">{errors.email.message}</p>
+              )}
             </Form.Group>
+
             <Form.Group className="mb-3" controlId="phone">
               <Form.Label id="form__label">Telephone</Form.Label>
               <Form.Control
-                id="form__input"
                 type="tel"
-                placeholder="(111) - 222 - 3333"
-                {...register("phone")}
+                name="phone"
+                placeholder="111-222-3333"
+                {...register("phone", { required: true })}
               />
+              {errors.phone && (
+                <p className="form_error">{errors.phone.message}</p>
+              )}
             </Form.Group>
           </Form>
         </Modal.Body>
