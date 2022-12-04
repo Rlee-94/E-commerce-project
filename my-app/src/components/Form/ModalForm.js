@@ -13,7 +13,7 @@ const schema = Yup.object().shape({
   lastName: Yup.string().required("Last name is required"),
   email: Yup.string().email().required("Please enter a valid email"),
   phone: Yup.string()
-    .matches(phoneRegex, "Phone number is not valid")
+    .matches(phoneRegex, "Phone number is not valid  111-222-3333")
     .required("Phone number is required"),
 });
 
@@ -60,7 +60,7 @@ export default function ModalForm(props) {
                 {...register("firstName", { required: true })}
               />
               {errors.firstName && (
-                <p className="form_error">{errors.firstName.message}</p>
+                <p className="form__error">{errors.firstName.message}</p>
               )}
             </Form.Group>
 
@@ -73,7 +73,7 @@ export default function ModalForm(props) {
                 {...register("lastName", { required: true })}
               />
               {errors.lastName && (
-                <p className="form_error">{errors.lastName.message}</p>
+                <p className="form__error">{errors.lastName.message}</p>
               )}
             </Form.Group>
 
@@ -86,7 +86,7 @@ export default function ModalForm(props) {
                 {...register("email", { required: true })}
               />
               {errors.email && (
-                <p className="form_error">{errors.email.message}</p>
+                <p className="form__error">{errors.email.message}</p>
               )}
             </Form.Group>
 
@@ -99,7 +99,7 @@ export default function ModalForm(props) {
                 {...register("phone", { required: true })}
               />
               {errors.phone && (
-                <p className="form_error">{errors.phone.message}</p>
+                <p className="form__error">{errors.phone.message}</p>
               )}
             </Form.Group>
           </Form>

@@ -466,7 +466,8 @@ html {
 }
 
 .form__error {
-  color: red;
+  color: red !important;
+  margin-top: 1rem;
 }
 
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
