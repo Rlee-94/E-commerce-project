@@ -2,20 +2,7 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
-import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import * as Yup from "yup";
-
-const phoneRegex = RegExp(/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/);
-
-const schema = Yup.object().shape({
-  firstName: Yup.string().required("First name is required"),
-  lastName: Yup.string().required("Last name is required"),
-  email: Yup.string().email().required("Email is required"),
-  phone: Yup.string()
-    .matches(phoneRegex, "Phone number is not valid  111-222-3333")
-    .required("Phone number is required"),
-});
+import Validation from "./Validation";
 
 export default function ModalForm(props) {
   const [show, setShow] = useState(false);
@@ -23,15 +10,11 @@ export default function ModalForm(props) {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm({
-    resolver: yupResolver(schema),
-  });
+  //For form validation
+  const { schema, register, handleSubmit, errors } = Validation();
 
-  const submitForm = (data) => {
+  const submitForm = (data, e) => {
+    e.preventDefault();
     console.log(data);
     schema && handleClose();
   };
