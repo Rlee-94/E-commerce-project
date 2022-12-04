@@ -11,7 +11,7 @@ const phoneRegex = RegExp(/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/);
 const schema = Yup.object().shape({
   firstName: Yup.string().required("First name is required"),
   lastName: Yup.string().required("Last name is required"),
-  email: Yup.string().email().required("Please enter a valid email"),
+  email: Yup.string().email().required("Email is required"),
   phone: Yup.string()
     .matches(phoneRegex, "Phone number is not valid  111-222-3333")
     .required("Phone number is required"),
@@ -31,10 +31,9 @@ export default function ModalForm(props) {
     resolver: yupResolver(schema),
   });
 
-  console.log(errors);
-
   const submitForm = (data) => {
     console.log(data);
+    schema && handleClose();
   };
 
   return (
