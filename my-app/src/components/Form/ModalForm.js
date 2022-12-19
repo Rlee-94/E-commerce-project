@@ -3,20 +3,23 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
 import Validation from "./Validation";
+import FormSuccess from "./FormSuccess";
 
 export default function ModalForm(props) {
+  //Modal state
   const [show, setShow] = useState(false);
-
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  //Form submission state
+  const [isSuccessfullySubmitted, setIsSuccessfullySubmitted] = useState(false);
 
   //For form validation
   const { schema, register, handleSubmit, errors } = Validation();
 
-  const submitForm = (data, e) => {
-    e.preventDefault();
+  const submitForm = (data) => {
     console.log(data);
-    schema && handleClose();
+    setIsSuccessfullySubmitted(true);
   };
 
   return (
@@ -26,6 +29,7 @@ export default function ModalForm(props) {
       </Button>
 
       <Modal show={show} onHide={handleClose}>
+        {schema ? <FormSuccess /> : ()}
         <Modal.Header closeButton id="modal__header">
           <Modal.Title>Get Started Today!</Modal.Title>
         </Modal.Header>
