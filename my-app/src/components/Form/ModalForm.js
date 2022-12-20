@@ -15,11 +15,13 @@ export default function ModalForm(props) {
   const [isSuccessfullySubmitted, setIsSuccessfullySubmitted] = useState(false);
 
   //For form validation
-  const { schema, register, handleSubmit, errors } = Validation();
+  const { schema, register, reset, handleSubmit, errors } = Validation();
 
-  const submitForm = (data) => {
+  const submitForm = (data, e) => {
+    e.preventDefault();
     console.log(data);
     setIsSuccessfullySubmitted(true);
+    reset();
   };
 
   return (
@@ -104,9 +106,11 @@ export default function ModalForm(props) {
           </Modal.Footer>
         </Modal>
       )}
-      <Button id={props.id} variant="primary" onClick={handleShow}>
-        {props.buttonText}
-      </Button>
+      {!isSuccessfullySubmitted && (
+        <Button id={props.id} variant="primary" onClick={handleShow}>
+          {props.buttonText}
+        </Button>
+      )}
     </>
   );
 }

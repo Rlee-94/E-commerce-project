@@ -18,6 +18,7 @@ export default function Validation() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
@@ -28,5 +29,6 @@ export default function Validation() {
     register,
     handleSubmit,
     errors,
+    reset,
   };
 }
