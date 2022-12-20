@@ -472,7 +472,9 @@ html {
 
 .form__success {
   @include flex-column();
-  border: 2px solid orangered;
+
+  background-color: #000;
+  color: $white;
 
   &-thanks {
     font-size: 2rem;
@@ -481,8 +483,16 @@ html {
 
   &-text {
     font-size: 1.3rem;
-    width: 60%;
+    width: 70%;
     padding: 1.5rem;
+  }
+
+  &-close {
+    background-color: $black;
+    color: $white;
+    padding: 0.5rem;
+    font-size: 2.5rem;
+    border: none;
   }
 }
 

@@ -7,9 +7,10 @@ export default function FormSuccess() {
         <Checkmark />
         <p className="form__success-thanks">Thanks!</p>
         <p className="form__success-text">
-          Your response was submitted. Please check your email for more
-          information.
+          We've received your request for a 14 day trial. Please check your
+          email for more information.
         </p>
+        <button className="form__success-close">x</button>
       </section>
     </>
   );
