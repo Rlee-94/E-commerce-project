@@ -1,4 +1,5 @@
 import ModalForm from "../components/Form/ModalForm";
+import heroImage from "../assets/img/hero-image.jpg";
 
 export default function Hero() {
   return (
@@ -15,11 +16,7 @@ export default function Hero() {
           <ModalForm id="hero__button" buttonText="Try free for 14 days" />
         </div>
         <div className="hero__right">
-          <img
-            src="https://images.unsplash.com/photo-1510885154241-75e69f87acae?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80"
-            alt="neon-hand"
-            className="hero__image"
-          />
+          <img src={heroImage} alt="neon-hand" className="hero__image" />
         </div>
       </div>
     </section>
