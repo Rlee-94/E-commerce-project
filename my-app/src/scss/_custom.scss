@@ -470,4 +470,20 @@ html {
   margin-top: 1rem;
 }
 
+.form__success {
+  @include flex-column();
+  border: 2px solid orangered;
+
+  &-thanks {
+    font-size: 2rem;
+    padding: 0.2rem;
+  }
+
+  &-text {
+    font-size: 1.3rem;
+    width: 60%;
+    padding: 1.5rem;
+  }
+}
+
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";

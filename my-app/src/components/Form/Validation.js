@@ -10,7 +10,7 @@ export default function Validation() {
   const schema = Yup.object().shape({
     firstName: Yup.string().required("First name is required"),
     lastName: Yup.string().required("Last name is required"),
-    email: Yup.string().email().required("Email is required"),
+    email: Yup.string().email("Invalid email").required("Email is required"),
     phone: Yup.string()
       .matches(phoneRegex, "Phone number is not valid  111-222-3333")
       .required("Phone number is required"),
