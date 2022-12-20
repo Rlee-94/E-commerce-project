@@ -99,10 +99,9 @@ html {
   }
 }
 
-#navbar__link {
-  &:active {
-    color: $neon;
-  }
+.navbar,
+.nav-link.active {
+  color: $neon !important;
 }
 
 .navbar-brand > h1 {
