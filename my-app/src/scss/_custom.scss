@@ -495,4 +495,32 @@ html {
   }
 }
 
+////////ABOUT SECTION////////////
+
+.about {
+  @include flex-column();
+
+  &__left {
+    @include flex-column();
+  }
+
+  &__title,
+  &__history {
+    font-weight: 600;
+  }
+
+  &__text {
+    font-size: 1.4rem;
+    width: 60%;
+  }
+
+  &__title {
+    margin-top: 2rem;
+  }
+
+  &__video {
+    width: 100%;
+  }
+}
+
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
