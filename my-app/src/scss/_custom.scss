@@ -43,6 +43,12 @@ $black-gradient: linear-gradient(
   rgba($black, 0.6)
 );
 
+$enterprise-gradient: linear-gradient(
+  to right,
+  rgba($neon, 0.2),
+  rgba($black, 0.6)
+);
+
 ///////////////MIXINS/////////////
 @mixin flex-column {
   display: flex;
@@ -261,6 +267,9 @@ html {
 
     &-black {
       background-image: $black-gradient;
+    }
+    &-green-black {
+      background-image: $enterprise-gradient;
     }
   }
 

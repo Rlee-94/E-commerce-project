@@ -21,7 +21,7 @@ export default function Pricing() {
       <PricingCard
         className="green"
         header="Lite"
-        price="$7/mo"
+        price="$7.99/mo"
         title="For large storage needs"
         details="For users who need to collaborate and share large files."
       />
@@ -29,20 +29,20 @@ export default function Pricing() {
         item1="5 user subscriptions"
         item2=" 20 uploads / month"
         item3="Automatic data backup"
-        item4="150GB of free storage"
+        item4="150GB of free storage each"
       />
       <PricingCard
         className="black"
         header="Pro"
-        price="$14/mo"
+        price="$14.99/mo"
         title="For power users with large storage needs"
         details="For power users who need to collaborate and encrypt large files. "
       />
       <PricingList
         item1="15 user subscriptions"
-        item2=" Unlimited uploads / month"
+        item2=" Unlimited uploads"
         item3="Automatic data backup and encryption"
-        item4="300GB of free storage"
+        item4="1TB of free storage each"
       />
       <PricingOptions />
     </section>

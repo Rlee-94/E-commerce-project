@@ -6,7 +6,8 @@ import Main from "./layout/Main";
 import Reviews from "./layout/Reviews";
 import Pricing from "./layout/Pricing";
 import Footer from "./layout/Footer";
-import About from "./pages/About";
+import AboutPage from "./pages/AboutPage";
+import PricingPage from "./pages/PricingPage";
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
       <Pricing />
       <Reviews />
       <Footer />
-      <About />
+      <AboutPage />
+      <PricingPage />
     </>
   );
 }
