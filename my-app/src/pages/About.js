@@ -1,5 +1,7 @@
 import Navigation from "../layout/Navigation";
-import earthmp4 from "../assets/img/Earth - 1236.mp4";
+import Footer from "../layout/Footer";
+import cloudDiagram from "../assets/img/Cloud diagram.png";
+import cloudPhoto from "../assets/img/about-cloud-storage.jpeg";
 
 export default function About() {
   return (
@@ -8,7 +10,7 @@ export default function About() {
       <section className="about">
         <section className="about__left">
           <h1 className="about__title">What is OSIRIS?</h1>
-          <p className="about__title-text about__text">
+          <p className="about__text">
             OSIRIS is a company specializing in online cloud storage. We believe
             in providing secure and reliable storage solutions for our
             customers.
@@ -21,11 +23,28 @@ export default function About() {
           </p>
         </section>
         <section className="about__right">
-          <video className="about__video" playsInline autoPlay muted loop>
-            <source src={earthmp4} type="video/mp4" />
-          </video>
+          <img className="about__photo" src={cloudPhoto} alt="cloud storage" />
+        </section>
+
+        <section className="about__works">
+          <h1 className="about__title">How We Work</h1>
+          <p className="about__text">
+            We have cloud servers across the globe that will securely backup
+            your data on any device. We can be used for personal data such as
+            documents, pictures, and music on a laptop. We can also backup
+            company data with our enterprise plan such as, operating systems,
+            databases, and servers. Your data is guaranteed to stay
+            confidential.
+          </p>
+          <img
+            className="about__works-photo"
+            src={cloudDiagram}
+            alt="Cloud Diagram"
+          />
         </section>
       </section>
+
+      <Footer />
     </>
   );
 }

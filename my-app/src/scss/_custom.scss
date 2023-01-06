@@ -518,8 +518,16 @@ html {
     margin-top: 2rem;
   }
 
-  &__video {
+  &__photo {
     width: 100%;
+  }
+
+  &__works {
+    @include flex-column();
+
+    &-photo {
+      width: 100%;
+    }
   }
 }
 
