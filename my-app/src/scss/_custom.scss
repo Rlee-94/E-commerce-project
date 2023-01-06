@@ -6,6 +6,7 @@ $light-gray: #d5d5d5;
 $dark-gray: #656565;
 $neon: #47df4a;
 $light-neon: #72e473;
+$services-green: #76c101;
 
 //WHITE AND GRAY COLORS
 $white: #fff;
@@ -504,9 +505,13 @@ html {
     @include flex-column();
   }
 
+  &__right {
+    margin: 2rem auto;
+  }
+
   &__title,
   &__history {
-    font-weight: 600;
+    font-weight: 800;
   }
 
   &__text {
@@ -528,6 +533,19 @@ html {
     &-photo {
       width: 100%;
     }
+  }
+
+  &__button {
+    width: 90%;
+    padding: 1rem;
+    margin: 2rem auto;
+    color: $black;
+    background-color: $neon;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    box-shadow: 0 3px 0px 1px $gray-300;
   }
 }
 

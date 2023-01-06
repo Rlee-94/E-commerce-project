@@ -2,6 +2,7 @@ import Navigation from "../layout/Navigation";
 import Footer from "../layout/Footer";
 import cloudDiagram from "../assets/img/Cloud diagram.png";
 import cloudPhoto from "../assets/img/about-cloud-storage.jpeg";
+import MoreServicesButton from "../components/MoreServicesButton";
 
 export default function About() {
   return (
@@ -11,13 +12,13 @@ export default function About() {
         <section className="about__left">
           <h1 className="about__title">What is OSIRIS?</h1>
           <p className="about__text">
-            OSIRIS is a company specializing in online cloud storage. We believe
+            Osiris is a company specializing in online cloud storage. We believe
             in providing secure and reliable storage solutions for our
             customers.
           </p>
           <h1 className="about__history">Our History</h1>
           <p className="about__history-text about__text">
-            OSIRIS was founded in 2020 by a team of experienced entrepreneurs
+            Osiris was founded in 2020 by a team of experienced entrepreneurs
             who saw a need for high-quality cloud storage services. Since then,
             we have grown to serve thousands of customers around the world.
           </p>
@@ -29,12 +30,12 @@ export default function About() {
         <section className="about__works">
           <h1 className="about__title">How We Work</h1>
           <p className="about__text">
-            We have cloud servers across the globe that will securely backup
-            your data on any device. We can be used for personal data such as
-            documents, pictures, and music on a laptop. We can also backup
-            company data with our enterprise plan such as, operating systems,
-            databases, and servers. Your data is guaranteed to stay
-            confidential.
+            Osiris hosts thousands of cloud servers across the globe that will
+            securely backup your data on any device. We can be used for personal
+            data such as documents, pictures, and music on a laptop. Our
+            enterprise plan will allow you to backup company data such as,
+            operating systems, databases, and servers. Your data is guaranteed
+            to stay confidential.
           </p>
           <img
             className="about__works-photo"
@@ -42,8 +43,8 @@ export default function About() {
             alt="Cloud Diagram"
           />
         </section>
+        <MoreServicesButton />
       </section>
-
       <Footer />
     </>
   );
