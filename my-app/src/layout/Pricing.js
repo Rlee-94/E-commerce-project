@@ -6,7 +6,7 @@ export default function Pricing() {
   return (
     <section>
       <PricingCard
-        className="gray"
+        className="silver"
         header="Free"
         price="$0"
         title="Great for starters"
@@ -19,7 +19,7 @@ export default function Pricing() {
         item4="50GB of free storage"
       />
       <PricingCard
-        className="green"
+        className="silver"
         header="Lite"
         price="$7.99/mo"
         title="For large storage needs"
@@ -32,7 +32,7 @@ export default function Pricing() {
         item4="150GB of free storage each"
       />
       <PricingCard
-        className="black"
+        className="green"
         header="Pro"
         price="$14.99/mo"
         title="For power users with large storage needs"

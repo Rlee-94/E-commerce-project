@@ -25,7 +25,7 @@ $dark: $gray-600;
 $btn-close-color: $white;
 
 //LINEAR GRADIENTS
-$gray-gradient: linear-gradient(
+$silver-gradient: linear-gradient(
   to right,
   rgba($gray-100, 0.5),
   rgba($gray-400, 0.5)
@@ -78,7 +78,7 @@ html {
 ////////////////////////////NAVBAR////////////////////////
 
 .navbar {
-  height: 5rem;
+  height: 6.5rem;
   &-nav a {
     color: $white;
     margin-left: 3rem;
@@ -257,8 +257,8 @@ html {
     text-transform: uppercase;
     font-weight: 600;
 
-    &-gray {
-      background-image: $gray-gradient;
+    &-silver {
+      background-image: $silver-gradient;
     }
 
     &-green {
@@ -383,7 +383,7 @@ html {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   z-index: -1;
   opacity: 0.18;
@@ -401,6 +401,7 @@ html {
   @include flex-column();
   background-color: $black;
   color: $gray-300;
+  margin-top: 1rem;
 
   &__left {
     margin-top: 2rem;
@@ -505,7 +506,7 @@ html {
   }
 }
 
-////////ABOUT SECTION////////////
+////////ABOUT PAGE////////////
 
 .about {
   @include flex-column();
@@ -555,6 +556,24 @@ html {
     font-size: 1.5rem;
     font-weight: 700;
     box-shadow: 0 3px 0px 1px $gray-300;
+  }
+}
+
+////////////PRICING PAGE ///////////////
+
+.pricing__page {
+  &-header {
+    margin: 0 1.5rem;
+  }
+  &-title {
+    font-size: 2.3rem;
+    font-weight: 700;
+    margin: 1.7rem auto;
+  }
+
+  &-text {
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
   }
 }
 
