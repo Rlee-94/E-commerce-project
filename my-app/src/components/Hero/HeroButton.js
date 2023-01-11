@@ -1,5 +1,3 @@
-import ModalForm from "../Form/ModalForm";
-
 export default function Button(props) {
   return (
     <>

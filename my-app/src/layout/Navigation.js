@@ -4,6 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import ShoppingCart from "../components/Navigation/ShoppingCart";
 import HeroButton from "../components/Hero/HeroButton";
+import { Link } from "react-router-dom";
 
 export default function Navigation() {
   return (
@@ -31,10 +32,16 @@ export default function Navigation() {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href="#action1">Home</Nav.Link>
-                  <Nav.Link href="#action2">About</Nav.Link>
-                  <Nav.Link href="#action3">Pricing</Nav.Link>
-                  <Nav.Link href="#action4">
+                  <Nav.Link>
+                    <Link to="/">Home</Link>
+                  </Nav.Link>
+                  <Nav.Link>
+                    <Link to="/about">About</Link>
+                  </Nav.Link>
+                  <Nav.Link>
+                    <Link to="/pricing">Pricing</Link>
+                  </Nav.Link>
+                  <Nav.Link href="checkout">
                     <ShoppingCart />
                   </Nav.Link>
                   <Nav.Link>

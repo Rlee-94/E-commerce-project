@@ -15,7 +15,7 @@ export default function ModalForm(props) {
   const [isSuccessfullySubmitted, setIsSuccessfullySubmitted] = useState(false);
 
   //For form validation
-  const { schema, register, reset, handleSubmit, errors } = Validation();
+  const { register, reset, handleSubmit, errors } = Validation();
 
   const submitForm = (data, e) => {
     e.preventDefault();
