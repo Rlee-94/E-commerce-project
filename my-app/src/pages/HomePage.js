@@ -3,6 +3,7 @@ import Hero from "../layout/Hero";
 import Main from "../layout/Main";
 import Pricing from "../layout/Pricing";
 import Footer from "../layout/Footer";
+import Reviews from "../layout/Reviews";
 
 export default function HomePage() {
   return (
@@ -11,6 +12,7 @@ export default function HomePage() {
       <Hero />
       <Main />
       <Pricing />
+      <Reviews />
       <Footer />
     </>
   );

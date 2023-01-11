@@ -2,7 +2,7 @@ import Navigation from "../layout/Navigation";
 import Footer from "../layout/Footer";
 import cloudDiagram from "../assets/img/Cloud diagram.png";
 import cloudPhoto from "../assets/img/about-cloud-storage.jpeg";
-import MoreServicesButton from "../components/Services/MoreServicesButton";
+import MoreServicesButton from "../components/Pricing/PricingServices/MoreServicesButton";
 
 export default function About() {
   return (

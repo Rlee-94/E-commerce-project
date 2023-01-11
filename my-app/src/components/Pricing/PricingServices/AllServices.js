@@ -1,5 +1,5 @@
-import PricingCard from "../Pricing/PricingCard";
-import PricingList from "../Pricing/PricingList";
+import PricingCard from "../PricingCard";
+import PricingList from "../PricingList";
 
 export default function AllServices() {
   return (
